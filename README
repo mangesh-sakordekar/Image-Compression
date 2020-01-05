@@ -1,0 +1,20 @@
+Qualitative Impressions:
+
+A larger range produces larger quad sizes and therefore a smaller compression ratio. A smaller range produces smaller quad sizes and therefore a larger compression ratio. 
+
+	compression ratio = 100 * (2L)/(N^2)
+
+	where L = leaf nodes and N = height/width of image
+
+
+**************************
+Application Documentation:
+
+This program reads an image file into an array, converts the image to a quadtree encoding, and then decodes the quadtree back to an image array. It uses OpenGL to display the original image on the left of the application window and the quadtree image on the right side of the window. The space bar toggles the quadtree image with one that displays the lines of the quadtree subdivisions. The + and - keys increment and decrement the range. ESC exits the program.
+
+Program usage: quadtree <filename>.png [quality_factor]   
+
+where quality_factor is an integer value the the user chooses to be the initial range
+
+
+Note: the image used must be square
